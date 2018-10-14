@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import BeachList from './BeachList'
+import Home from './Home';
+import '../App.css';
 
 export default class App extends Component {
  
   render() {
     return (
-      <div>
-        <BeachList />
+      <div className="App">
+        <Home/>
       </div>
     )
  }
