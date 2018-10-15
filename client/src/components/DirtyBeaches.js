@@ -1,6 +1,5 @@
 //Filter 'Beach' from API data
 import React, {Component} from 'react';
-import Beach from './Beach'
 
 class DirtyBeaches extends Component{
   constructor(){
@@ -16,8 +15,7 @@ class DirtyBeaches extends Component{
     return(
       <div>
         <ul>
-          <li onClick={this.outputBeach}>Dirty Beach</li>
-            {this.state.show && <Beach/>}
+          <li></li>
         </ul>
       </div>
     )
