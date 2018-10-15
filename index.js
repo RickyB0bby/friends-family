@@ -15,7 +15,7 @@ app.get('/beaches/', async (req, res) => {
    })
 
 app.get('/userZip/:zipcode', async (req, res) => {
-    let {data} = await axios.get(`https://www.zipcodeapi.com/rest/PRZHvGNPEWKSR4S95CbbkcE02FpC4T2Q1dOxEoSGC82u7Rs6Q3WW6MiwS8uCg20N/radius.json/${req.params.zipcode}/20/mile`)
+    let {data} = await axios.get(`https://www.zipcodeapi.com/rest/CwAaX6WrdhTyqwwlLEhHQ2lvKIAZuBlVFYNTPxUs3hijNGqiYwQZ9Glm1GtbRfHw/radius.json/${req.params.zipcode}/20/mile`).catch((err) => console.log(err))
     res.json(data);
 })
 
