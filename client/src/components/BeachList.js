@@ -11,20 +11,24 @@ export default class BeachList extends Component {
             results: []
         }
         this.handleZip = this.handleZip.bind(this);
+        // this.handleClick = this.handleClick.bind(this);
     }
+
+    // handleClick(){
+    //     console.log("hello, clicked.")
+    //     this.props.history.push('/hollywoodbeach')
+    // }
     
     async handleZip() {
-        const {userZip, beaches} = this.state
+        const {beaches} = this.state
         const zip = document.getElementById("zippy").value
         let {data} = await axios.get(`/userZip/${zip}`)
         await this.setState({userZip: data.zip_codes})
 
         let result = [];
-        console.log("BEaches", beaches);
-        beaches.filter(function(newData) {
+        beaches.forEach((newData) => {
             // eslint-disable-next-line
-            console.log("User zip", userZip);
-            return userZip.filter(function(oldData) {
+            return this.state.userZip.forEach((oldData) => {
               if (newData.zip_code === oldData.zip_code) { 
                 result.push(newData)
               }
@@ -32,7 +36,6 @@ export default class BeachList extends Component {
           })
           console.log(result)
           this.setState({results: result})
-            console.log("this is what we are looking at", this.state.results)
 
     }
 
@@ -58,11 +61,10 @@ export default class BeachList extends Component {
                 <div>
                     <ul>
                         <Link to="/hollywoodbeach">{this.getBeaches()[0]}</Link>
-                        {this.getBeaches()[1]}
-                        {this.getBeaches()[2]}
-                        {this.getBeaches()[3]}
-                        {this.getBeaches()[4]}
-                        {this.getBeaches()[5]}
+                        <Link to="/goldenbeach">{this.getBeaches()[1]}</Link>
+                        <Link to="/sunnyislesbeach">{this.getBeaches()[2]}</Link>
+                        <Link to="/hauloverbeach">{this.getBeaches()[3]}</Link>
+                        <Link to="/southbeach">{this.getBeaches()[4]}</Link>
                     </ul>
                 </div>
                 {/* <p>{this.state.results}</p> */}

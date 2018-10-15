@@ -1,7 +1,11 @@
 import React, {Component} from 'react';
 import BeachList from './BeachList';
-import {BrowserRouter, Route} from 'react-router-dom'
+import {BrowserRouter, Route} from 'react-router-dom';
 import HollywoodBeach from "./HollywoodBeach";
+import GoldenBeach from './GoldenBeach';
+import SunnyIslesBeach from './SunnyIslesBeach';
+import HauloverBeach from './HauloverBeach';
+import SouthBeach from './SouthBeach';
 
 class Home extends Component{
   // constructor(){
@@ -18,9 +22,12 @@ class Home extends Component{
     return(
         <BrowserRouter>
           <div>
-          <BeachList />
-            <Route exact path='/' Component={Home} />
-            <Route path='/hollywoodbeach' Component={HollywoodBeach} />
+            <Route exact path='/' component={BeachList} />
+            <Route path='/hollywoodbeach' component={HollywoodBeach} />
+            <Route path='/goldenbeach' component={GoldenBeach} />
+            <Route path='/sunnyislesbeach' component={SunnyIslesBeach} />
+            <Route path='/hauloverbeach' component={HauloverBeach} />
+            <Route path='/southbeach' component={SouthBeach} />
           </div>
          </BrowserRouter>
     )
