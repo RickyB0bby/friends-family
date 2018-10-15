@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import BeachList from './BeachList';
+import {BrowserRouter, Route} from 'react-router-dom'
+import HollywoodBeach from "./HollywoodBeach";
 
 class Home extends Component{
   // constructor(){
@@ -14,12 +16,13 @@ class Home extends Component{
   // }
   render(){
     return(
-      <div>
-        <h1> Welcome to Dirty Beaches </h1>
-        <p>Let's find a beach near you!</p>
-          {/* <input type="submit" value="Find a dirty beach near you!" onClick = {this.outputBeaches}/> */}
-         <BeachList />
-      </div>
+        <BrowserRouter>
+          <div>
+          <BeachList />
+            <Route exact path='/' Component={Home} />
+            <Route path='/hollywoodbeach' Component={HollywoodBeach} />
+          </div>
+         </BrowserRouter>
     )
   }
 }
