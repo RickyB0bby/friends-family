@@ -1,6 +1,5 @@
 module.exports = { 
     beaches: [
-    {"city": "Hollywood Beach", "zip_code": "33019"},
     {"city": "Golden Beach", "zip_code": "33160"},
     {"city": "Sunny Isles Beach", "zip_code": "33160"},
     {"city": "Haulover Beach", "zip_code": "33154"},
