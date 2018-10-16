@@ -1,3 +1,7 @@
+h1 {
+  text-align: center;
+}
+
 .mapbox-marker {
     width: 35px;
     height: 35px;
@@ -8,6 +12,6 @@
   }
   
   #location-list {
-    border: 1px solid black;
+    text-align: center;
     width: 50%;
   }

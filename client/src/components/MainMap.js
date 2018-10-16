@@ -12,18 +12,39 @@ const locations = [
     longitude: -80.1155,
     latitude: 26.0099
 },
+{
+    name: 'Golden Beach',
+    longitude: -80.1223,
+    latitude: 25.9651
+},
+{
+    name: 'Sunny Isles Beach',
+    longitude: -80.1234,
+    latitude: 25.9429
+},
+{
+    name: 'South Beach',
+    longitude: -80.1341,
+    latitude: 25.7826
+},
+
+{
+    name: 'Haulover Beach',
+    longitude: -80.1244,
+    latitude: 25.9066
+},
   ]
 
 
-class Map extends Component {
+class MainMap extends Component {
 
 async componentDidMount() {    
     mapboxgl.accessToken = 'pk.eyJ1Ijoid2lsbGlhbWtvbnRvcyIsImEiOiJjam5iOGRrOGYwMWNzM2tsODQ3a2Zha3Y0In0.vVHRN-Su0kyVhOe8N6KBhg'
     const mapOptions = {
         container: this.mapContainer,
         style: 'mapbox://styles/mapbox/streets-v9',
-        zoom: 13.25,
-        center: [-80.1155, 26.0099]
+        zoom: 9.55,
+        center: [-80.1734, 25.9129]
     };
     const geolocationOptions = {
         enableHighAccuracy: true,
@@ -88,7 +109,7 @@ render() {
     const style = {
         width: '100%',
         height: '30em',
-        borderRadius: '5%',
+        borderRadius: '5%'
     };
     return (
     <div id="map-page">
@@ -119,4 +140,4 @@ componentWillUnmount() {
 }
 
 
-export default Map
+export default MainMap
