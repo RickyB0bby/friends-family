@@ -1,0 +1,13 @@
+.mapbox-marker {
+    width: 35px;
+    height: 35px;
+    background-image: url("https://i.imgur.com/nHO6Z7F.png");
+    background-size: cover;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  #location-list {
+    border: 1px solid black;
+    width: 50%;
+  }
