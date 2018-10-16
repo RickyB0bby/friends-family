@@ -1,6 +1,11 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import {Link} from 'react-router-dom';
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
+import Footer from './Footer';
+import '../BeachList.css'
+
 
 export default class BeachList extends Component {
     constructor() {
@@ -46,7 +51,7 @@ export default class BeachList extends Component {
 
     getBeaches(){
         let codes = this.state.results.map(function(el, i){
-            return <li key={i}>{el.city}</li>
+            return <li className="beaches" key={i}><Button id="beachButtons" variant="contained" color="secondary">{el.city}</Button></li>
         })
         return codes
     }
@@ -54,20 +59,32 @@ export default class BeachList extends Component {
     render() {
         return (
             <div>
-                <h1>Welcome to Dirty Beaches</h1>
-                <p>Let's find a beach near you!</p>
-                <input id="zippy" type="text" name="zipcode" placeholder="Enter zip code"/>
-                <button onClick={this.handleZip}>Go!</button>
-                <div>
-                    <ul>
-                        <Link to="/hollywoodbeach">{this.getBeaches()[0]}</Link>
-                        <Link to="/goldenbeach">{this.getBeaches()[1]}</Link>
-                        <Link to="/sunnyislesbeach">{this.getBeaches()[2]}</Link>
-                        <Link to="/hauloverbeach">{this.getBeaches()[3]}</Link>
-                        <Link to="/southbeach">{this.getBeaches()[4]}</Link>
-                    </ul>
+                <header className="header">
+                    <h1 className="greet">Welcome to Dirty Beaches</h1>
+                    <p className="findBeach">Enter your zip code to find a beach near you!</p>
+                </header>
+                <div className="zip-input">
+                    <TextField 
+                        id="zippy" type="text" name="zipcode" placeholder="Enter zip code"
+                        margin="normal"
+                        variant="outlined"
+                    />
                 </div>
-                {/* <p>{this.state.results}</p> */}
+                <div className="go-button">
+                    <Button id="go" onClick={this.handleZip}>Go!</Button>
+                </div>
+                <section id="background-color">
+                    <div className="list-container">
+                        <ul>
+                            <Link to="/hollywoodbeach">{this.getBeaches()[0]}</Link>
+                            <Link to="/goldenbeach">{this.getBeaches()[1]}</Link>
+                            <Link to="/sunnyislesbeach">{this.getBeaches()[2]}</Link>
+                            <Link to="/hauloverbeach">{this.getBeaches()[3]}</Link>
+                            <Link to="/southbeach">{this.getBeaches()[4]}</Link>
+                        </ul>
+                    </div>
+                </section>
+                <Footer />
             </div>
         )
     }

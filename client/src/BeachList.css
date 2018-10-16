@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Prata');
+
+/*defaults*/
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+    margin-top: .25em;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*mobile first from header down*/
+
+.header {
+    background-color: rgb(252, 244, 222);
+    padding: 1em;
+    font-family: 'Prata', serif;
+    text-align: center;
+}
+
+
+.zip-input {
+    display: flex;
+    justify-content: center;
+    margin-top: -.95em;
+}
+
+#zippy {
+    width: 100vw;
+    text-align: center;
+    font-family: 'Prata', serif;
+    font-weight: bold;
+}
+
+.go-button {
+    display: flex;
+    justify-content: center;
+}
+
+#go {
+    flex-grow: 1;
+    padding: 1.25em;
+    margin-top: -.5em;
+    font-family: 'Prata', serif;
+    font-weight: bold;
+    font-size: 1em;
+    color: white;
+    background-color: rgb(20, 228, 255);
+}
+
+.list-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 2.5em;
+    right: 1.2em;
+}
+
+#beachButtons {
+    width: 100%;
+    padding: 1.5em;
+    font-family: 'Prata', serif;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(20, 228, 255);
+}
+
+#background-color {
+    background-color: rgb(248, 247, 242);
+    height: 60vh;
+}
+
+#main-container {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(248, 247, 242);
+}
+
+footer span i {
+    font-size: 3em;
+    color:  rgb(0, 0, 0);
+    margin: .15em;
+}
+
+footer p {
+    text-align: right;
+    margin-right: -7em;
+    margin-top: 3.75em;
+    font-size: .80em;
+}
