@@ -5,16 +5,16 @@ import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import Footer from './Footer';
 import '../BeachList.css'
-
+import HollywoodBeach from './HollywoodBeach'
 
 export default class BeachList extends Component {
-    constructor() {
+    constructor(props) {
         super();
         this.state = {
-            beaches: [],
             userZip: [],
             results: []
         }
+        this.state["beaches"] = props.beaches
         this.handleZip = this.handleZip.bind(this);
         // this.handleClick = this.handleClick.bind(this);
     }
@@ -23,7 +23,7 @@ export default class BeachList extends Component {
     //     console.log("hello, clicked.")
     //     this.props.history.push('/hollywoodbeach')
     // }
-    
+
     async handleZip() {
         const {beaches} = this.state
         const zip = document.getElementById("zippy").value
@@ -34,7 +34,7 @@ export default class BeachList extends Component {
         beaches.forEach((newData) => {
             // eslint-disable-next-line
             return this.state.userZip.forEach((oldData) => {
-              if (newData.zip_code === oldData.zip_code) { 
+              if (newData.zip_code === oldData.zip_code) {
                 result.push(newData)
               }
             })
@@ -42,11 +42,6 @@ export default class BeachList extends Component {
           console.log(result)
           this.setState({results: result})
 
-    }
-
-    async componentDidMount() {
-        let {data} = await axios.get('/beaches')
-        this.setState({beaches: data})
     }
 
     getBeaches(){
@@ -64,7 +59,7 @@ export default class BeachList extends Component {
                     <p className="findBeach">Enter your zip code to find a beach near you!</p>
                 </header>
                 <div className="zip-input">
-                    <TextField 
+                    <TextField
                         id="zippy" type="text" name="zipcode" placeholder="Enter zip code"
                         margin="normal"
                         variant="outlined"
@@ -76,11 +71,12 @@ export default class BeachList extends Component {
                 <section id="background-color">
                     <div className="list-container">
                         <ul>
-                            <Link to="/hollywoodbeach">{this.getBeaches()[0]}</Link>
+                            <Link to={{pathname: '/hollywoodbeach', state: {beachClick: this.beachClick}}}>{this.getBeaches()[0]}</Link>
                             <Link to="/goldenbeach">{this.getBeaches()[1]}</Link>
                             <Link to="/sunnyislesbeach">{this.getBeaches()[2]}</Link>
                             <Link to="/hauloverbeach">{this.getBeaches()[3]}</Link>
                             <Link to="/southbeach">{this.getBeaches()[4]}</Link>
+
                         </ul>
                     </div>
                 </section>
@@ -89,4 +85,3 @@ export default class BeachList extends Component {
         )
     }
 }
-
