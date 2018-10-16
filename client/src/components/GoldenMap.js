@@ -8,14 +8,14 @@ import Popup from './Popup';
 
 const locations = [
 {
-    name: 'Hollywood Beach',
-    longitude: -80.1155,
-    latitude: 26.0099
+    name: 'Golden Beach',
+    longitude: -80.1190,
+    latitude: 25.9651
 },
   ]
 
 
-class Map extends Component {
+class GoldenMap extends Component {
 
 async componentDidMount() {    
     mapboxgl.accessToken = 'pk.eyJ1Ijoid2lsbGlhbWtvbnRvcyIsImEiOiJjam5iOGRrOGYwMWNzM2tsODQ3a2Zha3Y0In0.vVHRN-Su0kyVhOe8N6KBhg'
@@ -23,7 +23,7 @@ async componentDidMount() {
         container: this.mapContainer,
         style: 'mapbox://styles/mapbox/streets-v9',
         zoom: 13.25,
-        center: [-80.1155, 26.0099]
+        center: [-80.1223, 25.9651]
     };
     const geolocationOptions = {
         enableHighAccuracy: true,
@@ -98,8 +98,7 @@ render() {
             {
                 locations.map((location, i) => {
                 return (
-                    <span key={i} onClick={ (e) => { this.flyTo(location) } } ></span>
-                    
+                    <span key={i} onClick={ (e) => { this.flyTo(location) } } ></span>    
                 )
                 })
             }
@@ -119,4 +118,4 @@ componentWillUnmount() {
 }
 
 
-export default Map
+export default GoldenMap

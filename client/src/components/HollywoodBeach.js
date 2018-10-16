@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Map from './Map'
+import HollywoodMap from './HollywoodMap'
 import './Map.css';
 
 export default class HollywoodBeach extends Component {
@@ -7,7 +7,7 @@ export default class HollywoodBeach extends Component {
         return (
         <div>
             <h1>Hollywood Beach</h1>
-            <Map />
+            <HollywoodMap />
         </div>
         )
     }

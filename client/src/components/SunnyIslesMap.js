@@ -8,44 +8,22 @@ import Popup from './Popup';
 
 const locations = [
 {
-    name: 'Hollywood Beach',
-    longitude: -80.1155,
-    latitude: 26.0099
-},
-{
-    name: 'Golden Beach',
-    longitude: -80.1223,
-    latitude: 25.9651
-},
-{
     name: 'Sunny Isles Beach',
-    longitude: -80.1234,
+    longitude: -80.1196,
     latitude: 25.9429
-},
-{
-    name: 'South Beach',
-    longitude: -80.1341,
-    latitude: 25.7826
-},
-
-{
-    name: 'Haulover Beach',
-    longitude: -80.1244,
-    latitude: 25.9066
 },
   ]
 
 
-class MainMap extends Component {
+class SunnyIslesMap extends Component {
 
 async componentDidMount() {    
     mapboxgl.accessToken = 'pk.eyJ1Ijoid2lsbGlhbWtvbnRvcyIsImEiOiJjam5iOGRrOGYwMWNzM2tsODQ3a2Zha3Y0In0.vVHRN-Su0kyVhOe8N6KBhg'
     const mapOptions = {
         container: this.mapContainer,
         style: 'mapbox://styles/mapbox/streets-v9',
-        zoom: 9.55,
-        center: [-80.1734, 25.9129]
-        
+        zoom: 13.25,
+        center: [-80.1234, 25.9429]
     };
     const geolocationOptions = {
         enableHighAccuracy: true,
@@ -54,7 +32,6 @@ async componentDidMount() {
     };
     await this.createMap(mapOptions, geolocationOptions)
 }
-
 
 createMap = (mapOptions, geolocationOptions) => {
     this.map = new mapboxgl.Map(mapOptions);
@@ -77,7 +54,6 @@ createMap = (mapOptions, geolocationOptions) => {
     map.on('load', () => {
     this.fetchPlaces();
     })
-
 }
 
 fetchPlaces = () => {
@@ -107,13 +83,12 @@ flyTo = (location) => {
     })
 }
 
-
 render() {
 
     const style = {
         width: '100%',
         height: '30em',
-        borderRadius: '5%'
+        borderRadius: '5%',
     };
     return (
     <div id="map-page">
@@ -123,8 +98,7 @@ render() {
             {
                 locations.map((location, i) => {
                 return (
-                    <span key={i} onClick={ (e) => { this.flyTo(location) } } ></span>
-                    
+                    <span key={i} onClick={ (e) => { this.flyTo(location) } } ></span>    
                 )
                 })
             }
@@ -144,4 +118,4 @@ componentWillUnmount() {
 }
 
 
-export default MainMap
+export default SunnyIslesMap
