@@ -109,12 +109,12 @@ class Header extends Component{
         </div>
         </div>
          <div className="butt">
-          <div className="bbox">
+         <div className="bbox1">
+          <Option2 toggleForm={this.props.toggleForm}/>
+          </div>
+           <div className="bbox">
             <Option1 toggleForm={this.props.toggleForm}/>
           </div>
-            <div className="bbox1">
-             <Option2 toggleForm={this.props.toggleForm}/>
-           </div>
           </div>
       </div>
     )
