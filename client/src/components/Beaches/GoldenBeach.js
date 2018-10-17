@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import GoldenMap from './GoldenMap'
+import GoldenMap from '../GoldenMap'
 
 export default class GoldenBeach extends Component {
     render() {

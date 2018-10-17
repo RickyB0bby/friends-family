@@ -1,3 +1,4 @@
+
 import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
@@ -6,6 +7,9 @@ import TextField from "@material-ui/core/TextField";
 import Footer from "./Footer";
 import MainMap from "./MainMap";
 import "../BeachList.css";
+import '../CSS/List.css'
+
+
 
 export default class BeachList extends Component {
   constructor() {
@@ -19,14 +23,6 @@ export default class BeachList extends Component {
     this.handleZip = this.handleZip.bind(this);
     this.handleMap = this.handleMap.bind(this);
   }
-
-  // handleMap() {
-  //     if(this.state.viewMap === true) {
-  //         return <MainMap />
-  //     } else {
-  //         return null;
-  //     }
-  // }
 
   handleMap = event => {
     const { show } = this.state;
@@ -56,14 +52,11 @@ export default class BeachList extends Component {
     this.setState({ beaches: data });
   }
 
+
   getBeaches() {
     let codes = this.state.results.map(function(el, i) {
       return (
-        <li className="beaches" key={i}>
-          <Button id="beachButtons" variant="contained" color="secondary">
-            {el.city}
-          </Button>
-        </li>
+        <li className="beaches" key={i}><Button id="beachButtons" variant="contained" color="secondary">{el.city}</Button></li>
       );
     });
     return codes;
@@ -72,32 +65,14 @@ export default class BeachList extends Component {
   render() {
     return (
       <div>
-        <header className="header">
-          <h1 className="greet">Welcome to Dirty Beaches</h1>
-          <p className="findBeach">
-            Enter your zip code to find a beach near you!
-          </p>
-        </header>
         <div className="zip-input">
-          <TextField
-            id="zippy"
-            type="text"
-            name="zipcode"
-            placeholder="Enter zip code"
+          <TextField id="zippy" type="text" name="zipcode" placeholder="Enter zip code"
             margin="normal"
             variant="outlined"
           />
         </div>
         <div className="go-button">
-          <Button
-            id="go"
-            onClick={e => {
-              this.handleMap();
-              this.handleZip(e);
-            }}
-          >
-            Go!
-          </Button>
+          <Button id="go"onClick={e => { this.handleMap(); this.handleZip(e); }}>Go!</Button>
         </div>
         <span className="map-span">{this.state.show && <MainMap />}</span>
         <section id="background-color">

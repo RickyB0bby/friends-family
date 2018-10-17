@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import SouthBeachMap from './SouthBeachMap';
+import SouthBeachMap from '../SouthBeachMap';
 
 export default class SouthBeach extends Component {
     render() {

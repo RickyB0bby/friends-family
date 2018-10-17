@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import SunnyIslesMap from './SunnyIslesMap'
+import SunnyIslesMap from '../SunnyIslesMap'
 
 export default class SunnyIslesBeach extends Component {
     render() {
