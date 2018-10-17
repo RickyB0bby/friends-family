@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import SouthBeachMap from '../SouthBeachMap';
-import Results from './Results';
+import Results from '../Results';
 
 
 
