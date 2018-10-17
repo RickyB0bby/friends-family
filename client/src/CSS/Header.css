@@ -1,0 +1,219 @@
+/* For mobile */
+* {
+  box-sizing: border-box;
+  text-align: center;
+}
+#top {
+  width:100%;
+}
+
+img {
+  height: auto;
+  width: 50px;
+}
+
+
+.ffoo1{
+  padding-top: 10px;
+  padding-bottom: 20px;
+
+}
+.ffoo2{
+  margin-top: 10px;
+}
+.ffoo3{
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.ffoo4{
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.foo {
+  float: left;
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+  border: 1px solid rgba(0, 0, 0, .2);
+  margin: 0 0.5em 0 0.5em;
+}
+
+.fooA {
+
+  float: left;
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+  border: 1px solid rgba(0, 0, 0, .2);
+  margin: 0 0.5em 0 0.5em;
+}
+#a1, .a1 {
+  background-color: white;
+}
+#a2, .a2 {
+  background-color: #d7b797;
+}
+#a3, .a3{
+  background-color: #62bfa9;
+}
+
+#svgAttributes {
+  position: relative;
+  left: 165px;
+}
+
+#newSvg {
+  top: 0;
+  left: 40;
+  position: absolute;
+}
+
+#imgLogo{
+  position: relative;
+  top: 20px;
+  right: 27px;
+}
+
+#logo {
+  z-index: 10000;
+  position: absolute;
+  top: 50;
+  left: 50;
+}
+.logo {
+  width: 80px;
+  height: 80px;
+}
+.vg {
+  /* opacity: .75; */
+}
+.header {
+  padding-top: 75px;
+  padding-bottom: 35px;
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: white;
+}
+.img {
+  background-image: url('./Images/6b.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+@media only screen and (min-width: 992px) {
+  img {
+    height: auto;
+    width: 90px;
+  }
+
+
+  #svgAttributes {
+    position: relative;
+    left: 500px;
+    bottom: 50px;
+  }
+
+  #newSvg {
+    top: 0;
+    left: 40;
+    position: absolute;
+  }
+
+  #imgLogo {
+    position: relative;
+    top: 65px;
+    right: 80px;
+  }
+
+  #logo {
+    z-index: 10000;
+    position: absolute;
+    top: 50;
+    left: 50;
+  }
+  .logo {
+    width: 80px;
+    height: 80px;
+  }
+  .vg {
+    opacity: .75;
+  }
+
+    .img {
+      background-image: url('./Images/6a.jpg');
+      background-position: center;
+    }
+    .header {
+      margin-bottom: 15px;
+      font-size: 100px;
+      padding-top: 20px;
+      padding-bottom: 80px;
+      margin-top: 150px;
+    }
+    .logo {
+      width: 200px;
+      height: 200px;
+      margin-right: 65px;
+    }
+    .fooA {
+
+      float: left;
+      width: 50px;
+      height: 50px;
+      margin: 5px;
+      border: 1px solid rgba(0, 0, 0, .2);
+      margin: 0 0.5em 0 0.5em;
+    }
+    .foo {
+      float: left;
+      width: 50px;
+      height: 50px;
+      margin: 5px;
+      border: 1px solid rgba(0, 0, 0, .2);
+      margin: 0 0.5em 0 0.5em;
+    }
+    .ffoo1{
+      padding-top: 10px;
+      padding-bottom: 20px;
+    }
+    .ffoo2{
+      margin-top: 40px;
+    }
+    .ffoo3{
+      margin-bottom: 10px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+    .ffoo4{
+      padding-bottom: 10px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+    .butt{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .text{
+      margin-top: 100px;
+
+      /* border: 2px solid black; */
+      border-radius: 50%;
+      color: white;
+      background-color: #d7b797;
+      padding-left: 10px;
+      padding-right: 10px;
+      height: 50px;
+    }
+    .bbox, .bbox1 {
+      width: 100%;
+    }
+
+}

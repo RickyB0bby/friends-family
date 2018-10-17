@@ -1,28 +1,31 @@
+
 import React, {Component} from 'react';
 import axios from 'axios';
 import {Link} from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import Footer from './Footer';
+import MainMap from "./MainMap";
 import '../BeachList.css'
-import HollywoodBeach from './HollywoodBeach'
+// import HollywoodBeach from './HollywoodBeach'
 
 export default class BeachList extends Component {
     constructor(props) {
         super();
         this.state = {
             userZip: [],
-            results: []
+            results: [],
+            show: false
         }
         this.state["beaches"] = props.beaches
         this.handleZip = this.handleZip.bind(this);
-        // this.handleClick = this.handleClick.bind(this);
+        this.handleMap = this.handleMap.bind(this);
     }
 
-    // handleClick(){
-    //     console.log("hello, clicked.")
-    //     this.props.history.push('/hollywoodbeach')
-    // }
+    handleMap = event => {
+      const { show } = this.state;
+      this.setState({ show: !show });
+    };
 
     async handleZip() {
         const {beaches} = this.state
@@ -39,10 +42,8 @@ export default class BeachList extends Component {
               }
             })
           })
-          console.log(result)
           this.setState({results: result})
-
-    }
+        }
 
     getBeaches(){
         let codes = this.state.results.map(function(el, i){
@@ -66,8 +67,9 @@ export default class BeachList extends Component {
                     />
                 </div>
                 <div className="go-button">
-                    <Button id="go" onClick={this.handleZip}>Go!</Button>
+                    <Button id="go"onClick={e => { this.handleMap(); this.handleZip(e); }}>Go!</Button>
                 </div>
+                <span className="map-span">{this.state.show && <MainMap />}</span>
                 <section id="background-color">
                     <div className="list-container">
                         <ul>

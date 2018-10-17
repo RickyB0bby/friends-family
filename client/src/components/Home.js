@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import BeachList from './BeachList';
+import Header from './Header';
 import {BrowserRouter, Route} from 'react-router-dom';
 import HollywoodBeach from "./HollywoodBeach";
 import GoldenBeach from './GoldenBeach';
@@ -32,12 +32,7 @@ class Home extends Component{
     currentBeaches[index].clean = false
     this.setState({beaches: currentBeaches})
   }
-
-  // outputBeaches = (event) => {
-  //   event.preventDefault()
-  //   const {show} = this.state
-  //   this.setState({show: !show})
-  // }
+  
   render(){
     return(
         <BrowserRouter>
