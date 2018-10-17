@@ -1,0 +1,94 @@
+/* .input {
+  font-weight: bold;
+  border-radius: 8px;
+  background-color: #0099b0;
+  color: white;
+  text-align: center;
+  height: 2em;
+  width: 3em;
+  border-style: none;
+  font-size: 20px;
+} */
+#form {
+  margin-top: 20px;
+}
+/* .zip {
+  margin-right: 15px;
+
+} */
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+  margin-top: .25em;
+}
+
+.zip-input {
+    display: flex;
+    justify-content: center;
+    margin-top: -.95em;
+}
+#zippy {
+    width: 73vw;
+    text-align: center;
+    /* font-family: 'Prata', serif; */
+    font-weight: bold;
+}
+.go-button {
+    display: flex;
+    justify-content: center;
+}
+#go {
+    flex-grow: 0.75;
+    padding: 1.25em;
+    margin-top: -.5em;
+    font-family: 'Prata', serif;
+    font-weight: bold;
+    font-size: 1em;
+    color: white;
+    background-color: #64d5d6;
+}
+.list-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 2.5em;
+    right: 1.2em;
+}
+
+#beachButtons {
+    width: 100%;
+    padding: 1.5em;
+    /* font-family: 'Prata', serif; */
+    font-weight: bold;
+    color: white;
+    background-color: rgb(20, 228, 255);
+}
+
+
+@media only screen and (min-width: 992px){
+  #go {
+      flex-grow: .25;
+      padding: 1.25em;
+      margin-top: -.5em;
+      /* font-family: 'Prata', serif; */
+      font-weight: bold;
+      font-size: 1em;
+      color: white;
+      background-color: #64d5d6;
+
+  }
+  #zippy {
+      width: 14vw;
+      text-align: center;
+      /* font-family: 'Prata', serif; */
+      font-weight: bold;
+  }
+}

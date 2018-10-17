@@ -3,8 +3,10 @@ import axios from 'axios';
 import {Link} from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
+import '../CSS/List.css'
 import Footer from './Footer';
 import '../BeachList.css'
+
 
 
 export default class BeachList extends Component {
@@ -23,7 +25,7 @@ export default class BeachList extends Component {
     //     console.log("hello, clicked.")
     //     this.props.history.push('/hollywoodbeach')
     // }
-    
+
     async handleZip() {
         const {beaches} = this.state
         const zip = document.getElementById("zippy").value
@@ -34,7 +36,7 @@ export default class BeachList extends Component {
         beaches.forEach((newData) => {
             // eslint-disable-next-line
             return this.state.userZip.forEach((oldData) => {
-              if (newData.zip_code === oldData.zip_code) { 
+              if (newData.zip_code === oldData.zip_code) {
                 result.push(newData)
               }
             })
@@ -59,34 +61,29 @@ export default class BeachList extends Component {
     render() {
         return (
             <div>
-                <header className="header">
-                    <h1 className="greet">Welcome to Dirty Beaches</h1>
-                    <p className="findBeach">Enter your zip code to find a beach near you!</p>
-                </header>
-                <div className="zip-input">
-                    <TextField 
-                        id="zippy" type="text" name="zipcode" placeholder="Enter zip code"
-                        margin="normal"
-                        variant="outlined"
-                    />
+              <div id="form">
+              <div className="zip-input">
+                   <TextField
+                       id="zippy" type="text" name="zipcode" placeholder="Enter zip code"
+                       margin="normal"
+                       variant="outlined"
+                  />
+               </div>
+               <div className="go-button">
+                   <Button id="go" onClick={this.handleZip}>Go!</Button>
+               </div>
+             </div>
+                <div className="list-container">
+                    <ul>
+                        <Link to="/hollywoodbeach">{this.getBeaches()[0]}</Link>
+                        <Link to="/goldenbeach">{this.getBeaches()[1]}</Link>
+                        <Link to="/sunnyislesbeach">{this.getBeaches()[2]}</Link>
+                        <Link to="/hauloverbeach">{this.getBeaches()[3]}</Link>
+                        <Link to="/southbeach">{this.getBeaches()[4]}</Link>
+                    </ul>
                 </div>
-                <div className="go-button">
-                    <Button id="go" onClick={this.handleZip}>Go!</Button>
-                </div>
-                <section id="background-color">
-                    <div className="list-container">
-                        <ul>
-                            <Link to="/hollywoodbeach">{this.getBeaches()[0]}</Link>
-                            <Link to="/goldenbeach">{this.getBeaches()[1]}</Link>
-                            <Link to="/sunnyislesbeach">{this.getBeaches()[2]}</Link>
-                            <Link to="/hauloverbeach">{this.getBeaches()[3]}</Link>
-                            <Link to="/southbeach">{this.getBeaches()[4]}</Link>
-                        </ul>
-                    </div>
-                </section>
                 <Footer />
             </div>
         )
     }
 }
-
