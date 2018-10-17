@@ -4,6 +4,9 @@ import {Link} from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import '../CSS/List.css'
+import Footer from './Footer';
+import '../BeachList.css'
+
 
 
 export default class BeachList extends Component {
@@ -50,7 +53,7 @@ export default class BeachList extends Component {
 
     getBeaches(){
         let codes = this.state.results.map(function(el, i){
-            return <li className="beaches" key={i} id="beachButtons" variant="contained" color="secondary">{el.city}</li>
+            return <li className="beaches" key={i}><Button id="beachButtons" variant="contained" color="secondary">{el.city}</Button></li>
         })
         return codes
     }
@@ -79,7 +82,7 @@ export default class BeachList extends Component {
                         <Link to="/southbeach">{this.getBeaches()[4]}</Link>
                     </ul>
                 </div>
-                {/* <p>{this.state.results}</p> */}
+                <Footer />
             </div>
         )
     }

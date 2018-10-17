@@ -7,6 +7,7 @@ import SunnyIslesBeach from './Beaches/SunnyIslesBeach';
 import HauloverBeach from './Beaches/HauloverBeach';
 import SouthBeach from './Beaches/SouthBeach';
 
+
 class Home extends Component{
   // constructor(){
   //   super();
