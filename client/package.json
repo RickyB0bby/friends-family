@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^3.2.2",
     "axios": "^0.18.0",
     "google-map-react": "^1.0.9",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
+    "react-material-ui": "0.0.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.0.4",
     "semantic-ui-react": "^0.82.5"

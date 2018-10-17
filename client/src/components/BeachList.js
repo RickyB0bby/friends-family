@@ -1,6 +1,10 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import {Link} from 'react-router-dom';
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
+import '../CSS/List.css'
+
 
 export default class BeachList extends Component {
     constructor() {
@@ -18,7 +22,7 @@ export default class BeachList extends Component {
     //     console.log("hello, clicked.")
     //     this.props.history.push('/hollywoodbeach')
     // }
-    
+
     async handleZip() {
         const {beaches} = this.state
         const zip = document.getElementById("zippy").value
@@ -29,7 +33,7 @@ export default class BeachList extends Component {
         beaches.forEach((newData) => {
             // eslint-disable-next-line
             return this.state.userZip.forEach((oldData) => {
-              if (newData.zip_code === oldData.zip_code) { 
+              if (newData.zip_code === oldData.zip_code) {
                 result.push(newData)
               }
             })
@@ -46,7 +50,7 @@ export default class BeachList extends Component {
 
     getBeaches(){
         let codes = this.state.results.map(function(el, i){
-            return <li key={i}>{el.city}</li>
+            return <li className="beaches" key={i} id="beachButtons" variant="contained" color="secondary">{el.city}</li>
         })
         return codes
     }
@@ -54,11 +58,19 @@ export default class BeachList extends Component {
     render() {
         return (
             <div>
-                <h1>Welcome to Dirty Beaches</h1>
-                <p>Let's find a beach near you!</p>
-                <input id="zippy" type="text" name="zipcode" placeholder="Enter zip code"/>
-                <button onClick={this.handleZip}>Go!</button>
-                <div>
+              <div id="form">
+              <div className="zip-input">
+                   <TextField
+                       id="zippy" type="text" name="zipcode" placeholder="Enter zip code"
+                       margin="normal"
+                       variant="outlined"
+                  />
+               </div>
+               <div className="go-button">
+                   <Button id="go" onClick={this.handleZip}>Go!</Button>
+               </div>
+             </div>
+                <div className="list-container">
                     <ul>
                         <Link to="/hollywoodbeach">{this.getBeaches()[0]}</Link>
                         <Link to="/goldenbeach">{this.getBeaches()[1]}</Link>
@@ -72,4 +84,3 @@ export default class BeachList extends Component {
         )
     }
 }
-
