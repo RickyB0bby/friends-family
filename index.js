@@ -7,7 +7,8 @@ const app = express();
 
 const PORT = process.env.PORT || 5000;
 
-app.use(express.static(__dirname + 'client/build'));
+app.use(express.static(__dirname + '/client/build'));
+console.log(__dirname + '/client/build');
 
 app.get('/beaches/', async (req, res) => {
     res.send(beachZips.beaches)
