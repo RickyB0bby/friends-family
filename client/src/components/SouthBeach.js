@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
+import Results from './Results';
+
 
 
 export default class SouthBeach extends Component {
@@ -25,5 +27,6 @@ export default class SouthBeach extends Component {
     callOut(){
       this.state.beaches.setState({clean: false})
       console.log(this.state.beaches.clean)
+
     }
 }

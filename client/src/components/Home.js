@@ -7,7 +7,7 @@ import SunnyIslesBeach from './SunnyIslesBeach';
 import HauloverBeach from './HauloverBeach';
 import SouthBeach from './SouthBeach';
 import axios from 'axios';
-
+import Results from './Results';
 
 
 class Home extends Component{
@@ -48,6 +48,7 @@ class Home extends Component{
             <Route path='/sunnyislesbeach' component={SunnyIslesBeach} />
             <Route path='/hauloverbeach' component={HauloverBeach} />
             <Route path='/southbeach' component={()=>{ return <SouthBeach bIndex={4} onClickBeach={this.beachClick}/>}} />
+            <Route path='/Results' component={Results} />
           </div>
          </BrowserRouter>
     )

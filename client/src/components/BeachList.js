@@ -76,7 +76,6 @@ export default class BeachList extends Component {
                             <Link to="/sunnyislesbeach">{this.getBeaches()[2]}</Link>
                             <Link to="/hauloverbeach">{this.getBeaches()[3]}</Link>
                             <Link to="/southbeach">{this.getBeaches()[4]}</Link>
-
                         </ul>
                     </div>
                 </section>
