@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import SouthBeachMap from '../SouthBeachMap';
-import Results from '../Results';
-import '../../CSS/Results.css'
+import Button from '@material-ui/core/Button';
+import '../../BeachList.css'
 
 
 
@@ -16,12 +16,13 @@ export default class SouthBeach extends Component {
 
     render() {
         return (
-        <div>
-            <h1>South Beach</h1>
+        <div className="south-beach-main">
+            <h1 id="south-beach">South Beach</h1>
             <SouthBeachMap />
-            <p>"South Beach is known for its beaches and the glamorous scene around its happening night spots and celebrity-chef eateries. Chain stores and indie fashion shops line pedestrian shopping strip Lincoln Road Mall. On Ocean Drive, known for its well-preserved art deco architecture, outdoor cafes offer a ringside view of the scene. Museums include the Wolfsonian-FIU, which has a collection of modern art and objects."</p>
+            <p>South Beach is known for its gorgeous beaches and the glamorous scene around its happening night spots and celebrity-chef eateries. On Ocean Drive, known for its well-preserved art deco architecture, outdoor cafes offer a ringside view of the scene.</p>
+            <span>When you're finished doing your part, simply click "CLEANED!".</span>           
             <Link to="/Results" className="done">
-              <button id="button" className="callOutButton" onClick={(event)=>{this.onClickBeach(this.bIndex)}}>Clean!</button>
+              <Button id="beachButtons"  className="callOutButton" onClick={(event)=>{this.onClickBeach(this.bIndex)}}>Cleaned!</Button>
             </Link>
         </div>
         )

@@ -20,7 +20,7 @@ class Header extends Component{
     setTimeout(() => {
       let pic = document.getElementById('logo');
       pic.style.display = "inline";
-    }, 1350)
+    }, 1380)
     anime({
       targets: ["#a3","#a2","#a1"],
       translateX: function(foo){
@@ -28,16 +28,16 @@ class Header extends Component{
       },
       translateY: [
   // { value: 0, duration: 1000, elasticity: 100 },
-  { value: 180, duration: 500, elasticity: 100 },
-  // { value: 1000, duration: 500, delay: 100, elasticity: 100 }
+  // { value: 180, duration: 500, elasticity: 100 },
+  { value: 200, duration: 1300, delay: 100, elasticity: 100 }
 ],
       scale: function (foo, i, l){
-        return (1 - i) + 3;
+        return (-1);
       },
       rotate: function() {return anime.random(-360,360);},
-      duration: function() { return anime.random(1200, 1800); },
+      // duration: function() { return anime.random(1200, 1800); },
       // duration: function() { return anime.random(800, 1600); },
-      delay: function() { return anime.random(400,600); },
+      // delay: function() { return anime.random(400,600); },
       direction: 'reverse',
         })
       // loop: true
@@ -52,16 +52,16 @@ class Header extends Component{
         },
         translateY: [
     // { value: 40, duration: 500, elasticity: 100 },
-    { value: -70, duration: 500, elasticity: 100 },
-    // { value: 100, duration: 500, delay: 500, elasticity: 100 }
+    // { value: -70, duration: 500, elasticity: 100 },
+    { value: -50, duration: 1300, delay: 500, elasticity: 100 }
   ],
         scale: function (fooA, i, l){
-          return (1 - i) + 3;
+          return (-1);
         },
         rotate: function() {return anime.random(-360,360);},
-        duration: function() { return anime.random(1200, 1800); },
-        duration: function() { return anime.random(800, 1600); },
-        delay: function() { return anime.random(400,600); },
+        // duration: function() { return anime.random(1200, 1800); },
+        // duration: function() { return anime.random(800, 1600); },
+        // delay: function() { return anime.random(400,600); },
         direction: 'reverse',
 
       })

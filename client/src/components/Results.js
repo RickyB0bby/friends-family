@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
-import Home from './Home';
-import BeachList from './BeachList';
 import {Link} from 'react-router-dom';
+import Button from '@material-ui/core/Button';
 import '../CSS/Results.css'
 
 
@@ -17,7 +16,7 @@ export default class SouthBeach extends Component {
         return (
         <div>
             <h1>Thanks for cleaning a Dirty Beach!</h1>
-            <Link to="/" className="button">Done!</Link>
+            <Link to="/" className="button">DONE!</Link>
         </div>
         )
     }

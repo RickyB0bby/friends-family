@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Niramit');
+
 * {
   box-sizing: border-box;
 }
@@ -7,38 +9,34 @@ h3 {
 }
 .boxy2 {
   text-align: center;
-  /* border: 5px solid blue; */
   font-size: 1.5em;
-  color: white;
-  margin-top: 1em;
+  font-weight: bold;
+  font-family: 'Niramit', sans-serif;
+  color: #74cbcf;
   margin-bottom: 35px;
-  /* margin-left: 5px;
-  margin-right: 5px; */
-  padding-top: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 20px;
-  background-color: #74cbcf;
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  background-color: rgb(253, 253, 249);
 }
+
+.boxy2 p {
+  color: black;
+  font-weight: normal;
+}
+
 .button2 {
-  /* border-radius: 8px; */
   background-color: #6481ae;
-  /* color: white;
-  text-align: center;
-  height: 2em;
-  width: 10em;
-  border-style: none;*/
-  /* font-size: 1.5em; */
-
-
-  border: none;
-
-  flex-grow: 1;
-  padding: 1.25em;
-  margin-top: -1.5em;
-  /* font-family: 'Prata', serif; */
   font-weight: bold;
   font-size: 20px;
+  font-family: 'Niramit', sans-serif;
+  padding: 1.45em;
+  margin-top: -1.5em;
+  flex-grow: 1;
+  border-radius: 5%;
+
+
   color: white;
 }
 
@@ -55,8 +53,6 @@ h3 {
 
 @media only screen and (min-width: 992px) {
   .boxy2{
-    /* height: 400px;
-    width: 400px; */
     border-radius: 5px;
     margin-top: 1em;
     margin-bottom: 1em;

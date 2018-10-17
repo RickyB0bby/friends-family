@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import BeachList from './BeachList';
+// import BeachList from './BeachList';
 import anime from 'animejs';
 import '../CSS/Option2.css'
 
@@ -41,8 +41,10 @@ class Option2 extends Component{
   render(){
     return(
         <div className="abox1" id="dbox">
-          <h3>Call out a Dirty Beach!</h3>
-          <p className="boxy2">Are you tired of visiting your beach, only to find out it’s dirty? Call out that Dirty Beach so that it can get cleaned up!</p>
+        <div className="boxy2">
+          <h2>Call out a Dirty Beach!</h2>
+          <p>Are you tired of visiting your beach, only to find out it’s dirty? Call out that Dirty Beach so that it can get cleaned up!</p>
+        </div>
           <div className="zip-input">
           <button className="button2" onClick ={(ev) => {this.outputButton2(ev); this.props.toggleForm()}}>Report a beach!</button>
           </div>

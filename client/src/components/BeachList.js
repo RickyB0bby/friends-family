@@ -61,12 +61,12 @@ export default class BeachList extends Component {
 
     render() {
         return (
-            <div>
+            <div id="main">
             <Header beaches={this.state.beaches} toggleForm={this.toggleForm}/>
                  <div id='formHide' hidden={!this.state.showForm}>
                   <div className="zip-input">
                       <TextField
-                          id="zippy" type="text" name="zipcode" placeholder="Enter zip code"
+                          id="zippy" type="text" name="zipcode" placeholder="Enter zip code" autoComplete="off"
                           margin="normal"
                           variant="outlined"
                       />
@@ -76,7 +76,6 @@ export default class BeachList extends Component {
                   </div>
                 </div>
                 <span className="map-span">{this.state.show && <MainMap />}</span>
-                <section id="background-color">
                     <div className="list-container">
                         <ul>
                             <Link to={{pathname: '/hollywoodbeach', state: {beachClick: this.beachClick}}}>{this.getBeaches()[0]}</Link>
@@ -86,8 +85,9 @@ export default class BeachList extends Component {
                             <Link to="/southbeach">{this.getBeaches()[4]}</Link>
                         </ul>
                     </div>
-                </section>
-                <Footer />
+                <div className="footer">
+                    <Footer />
+                </div>
             </div>
         )
     }

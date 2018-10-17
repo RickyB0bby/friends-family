@@ -2,7 +2,6 @@
 
 @import url('https://fonts.googleapis.com/css?family=Great+Vibes');
 
-
   body, html {
     margin: 0;
     padding: 0;
@@ -11,15 +10,11 @@
     box-sizing: border-box;
     box-sizing: inherit;
 }
-#top {
-  /* width:100%; */
-}
 
 img {
   height: auto;
   width: 50px;
 }
-
 
 .ffoo1{
   padding-top: 5px;
@@ -75,11 +70,10 @@ left: 10;
 }
 
 #newSvg {
-  margin-left: 180px;
+  margin-left: 155px;
   width: 70px;
   height: 10px;
   margin-bottom: 5px;
-  /* position: absolute; */
 }
 
 #newLogo{
@@ -100,9 +94,7 @@ left: 10;
   width: auto;
   height: 60px;
 }
-.vg {
-  /* opacity: .1; */
-}
+
 .header {
   padding-left: 10px;
   padding-right: 10px;

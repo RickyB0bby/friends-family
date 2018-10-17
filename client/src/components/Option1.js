@@ -43,8 +43,10 @@ class Option1 extends Component{
   render(){
     return(
       <div className="abox" id="dbox">
-         <h3> Clean a Dirty Beach! </h3>
-        <p className="boxy1">Want some good karma points? Go here to find a Dirty Beach that you can help clean up. You can even bring your friends to help!</p>
+      <div className="boxy1">
+        <h2> Clean a Dirty Beach! </h2>
+        <p>Want some good karma points? Go here to find a Dirty Beach that you can help clean up. You can even bring your friends to help!</p>
+      </div>
         <div className="zip-input">
         <button className="button1" onClick = {(ev) => {this.outputButton1(ev); this.props.toggleForm()}}>Find a beach!</button>
         </div>
