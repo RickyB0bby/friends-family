@@ -21,7 +21,7 @@ a {
 /*mobile first from header down*/
 
 .header {
-    background-color: rgb(252, 244, 222);
+    /* background-color: rgb(252, 244, 222); */
     padding: 1em;
     font-family: 'Prata', serif;
     text-align: center;

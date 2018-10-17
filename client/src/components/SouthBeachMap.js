@@ -16,7 +16,7 @@ const locations = [
 
 class SouthBeachMap extends Component {
 
-async componentDidMount() {    
+async componentDidMount() {
     mapboxgl.accessToken = 'pk.eyJ1Ijoid2lsbGlhbWtvbnRvcyIsImEiOiJjam5iOGRrOGYwMWNzM2tsODQ3a2Zha3Y0In0.vVHRN-Su0kyVhOe8N6KBhg'
     const mapOptions = {
         container: this.mapContainer,
@@ -60,12 +60,12 @@ fetchPlaces = () => {
     locations.forEach((location, i) => {
         let elm = document.createElement('div')
         elm.className = "mapbox-marker"
-        
+
         let popup = new mapboxgl.Popup({ offset: 25})
         .setHTML(ReactDOMServer.renderToStaticMarkup(
             <Popup location={location}></Popup>
         ))
-       
+
         let marker = new mapboxgl.Marker(elm)
         .setLngLat([location.longitude, location.latitude])
         .setPopup(popup)
@@ -97,7 +97,7 @@ render() {
             {
                 locations.map((location, i) => {
                 return (
-                    <span key={i} onClick={ (e) => { this.flyTo(location) } } ></span>    
+                    <span key={i} onClick={ (e) => { this.flyTo(location) } } ></span>
                 )
                 })
             }

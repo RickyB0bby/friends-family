@@ -1,7 +1,12 @@
 /* For mobile */
-* {
-  box-sizing: border-box;
-  text-align: center;
+
+  body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    box-sizing: inherit;
 }
 #top {
   width:100%;
@@ -63,41 +68,44 @@ img {
 
 #svgAttributes {
   position: relative;
-  left: 165px;
+left: 10;
 }
 
 #newSvg {
-  top: 0;
-  left: 40;
-  position: absolute;
+  margin-left: 140px;
+  width: 50px;
+  height: 50px;
+  /* position: absolute; */
 }
 
-#imgLogo{
+#newLogo{
   position: relative;
-  top: 20px;
-  right: 27px;
+  top: 8px;
+  right: 0px;
+  left: 5px;
 }
 
 #logo {
   z-index: 10000;
   position: absolute;
-  top: 50;
-  left: 50;
+  width: auto;
+  height: 35px;
 }
 .logo {
-  width: 80px;
-  height: 80px;
+  width: auto;
+  height: 50px;
 }
 .vg {
   /* opacity: .75; */
 }
 .header {
-  padding-top: 75px;
-  padding-bottom: 35px;
+  padding-top: 15px;
+  padding-bottom: 5px;
   margin-top: 0;
   margin-bottom: 15px;
   color: white;
 }
+
 .img {
   background-image: url('./Images/6b.jpg');
   background-repeat: no-repeat;

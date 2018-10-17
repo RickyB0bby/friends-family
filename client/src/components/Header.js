@@ -18,8 +18,9 @@ class Header extends Component{
 
   componentDidMount() {
     setTimeout(() => {
-      this.hello.style = {display: "inline"}
-    }, 1500)
+      let pic = document.getElementById('logo');
+      pic.style.display = "inline";
+    }, 1350)
     anime({
       targets: ["#a3","#a2","#a1"],
       translateX: function(foo){
@@ -88,8 +89,8 @@ class Header extends Component{
           </div>
           <div id="svgAttributes">
            <div id="newSvg">
-            <div id="imgLogo">
-            <img id="logo" src={'/Logo.png'} style={{display: 'none'}} ref={(el) => this.hello = el}  />
+           <div id="newLogo">
+            <img id="logo" src={'/Logo1.png'} style={{display: 'none'}} ref={(el) => this.hello = el} />
             </div>
              <svg styles={{backgroundColor: 'red'}}  viewBox="0 0 128 128" className="logo">
               <polygon points="64 68.64 8.574 100 63.446 67.68 64 4 64.554 67.68 119.426 100 " fill="white" className="vg">
@@ -97,7 +98,7 @@ class Header extends Component{
             </svg>
           </div>
           </div>
-          <h1 className="header"> Welcome to Dirty Beaches </h1>
+          <h1 className="header"> Dirty Beaches </h1>
             <div className="ffoo3">
           <div className="fooA a2" id="b2" data-x="-200"></div>
           </div>
@@ -109,10 +110,10 @@ class Header extends Component{
         </div>
          <div className="butt">
           <div className="bbox">
-            <Option1 />
+            <Option1 toggleForm={this.props.toggleForm}/>
           </div>
             <div className="bbox1">
-             <Option2 />
+             <Option2 toggleForm={this.props.toggleForm}/>
            </div>
           </div>
       </div>

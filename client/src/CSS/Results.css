@@ -1,0 +1,64 @@
+.button {
+  font-weight: bold;
+  border-radius: 8px;
+  background-color: #64d5d6;
+  /* color: white;
+  text-align: center;
+  height: 2em;
+  width: 10em;
+  border-style: none; */
+  font-size: 20px;
+  border: none;
+
+  flex-grow: 1;
+  padding: 1.25em;
+  margin-top: -.5em;
+  /* font-family: 'Prata', serif; */
+  font-weight: bold;
+  /* font-size: 1em; */
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin-top: -.95em;
+
+}
+#button {
+
+    font-weight: bold;
+    border-radius: 8px;
+    background-color: #64d5d6;
+    /* color: white;
+    text-align: center;
+    height: 2em;
+    width: 10em;
+    border-style: none; */
+    font-size: 20px;
+    border: none;
+
+    flex-grow: 1;
+    padding: 1.25em;
+    margin-top: -.5em;
+    /* font-family: 'Prata', serif; */
+    font-weight: bold;
+    /* font-size: 1em; */
+    color: white;
+margin-left: 100px;
+    display: flex;
+    justify-content: center;
+    margin-top: -.95em;
+
+}
+.done {
+  margin-top: 10px;
+
+}
+.go-button {
+    display: flex;
+    justify-content: center;
+}
+
+.zip-input {
+    display: flex;
+    justify-content: center;
+    margin-top: -.95em;
+}

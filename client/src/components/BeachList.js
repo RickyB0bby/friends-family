@@ -5,8 +5,9 @@ import {Link} from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import Footer from './Footer';
-import MainMap from "./MainMap";
+import MainMap from './MainMap';
 import '../BeachList.css'
+import Header from './Header'
 // import HollywoodBeach from './HollywoodBeach'
 
 export default class BeachList extends Component {
@@ -15,17 +16,23 @@ export default class BeachList extends Component {
         this.state = {
             userZip: [],
             results: [],
-            show: false
+            show: false,
+            showForm: false
         }
         this.state["beaches"] = props.beaches
         this.handleZip = this.handleZip.bind(this);
         this.handleMap = this.handleMap.bind(this);
+        this.toggleForm = this.toggleForm.bind(this);
     }
 
     handleMap = event => {
       const { show } = this.state;
       this.setState({ show: !show });
     };
+
+    toggleForm () {
+      this.setState({showForm: !this.state.showForm})
+    }
 
     async handleZip() {
         const {beaches} = this.state
@@ -55,19 +62,18 @@ export default class BeachList extends Component {
     render() {
         return (
             <div>
-                <header className="header">
-                    <h1 className="greet">Welcome to Dirty Beaches</h1>
-                    <p className="findBeach">Enter your zip code to find a beach near you!</p>
-                </header>
-                <div className="zip-input">
-                    <TextField
-                        id="zippy" type="text" name="zipcode" placeholder="Enter zip code"
-                        margin="normal"
-                        variant="outlined"
-                    />
-                </div>
-                <div className="go-button">
-                    <Button id="go"onClick={e => { this.handleMap(); this.handleZip(e); }}>Go!</Button>
+            <Header beaches={this.state.beaches} toggleForm={this.toggleForm}/>
+                 <div id='formHide' hidden={!this.state.showForm}>
+                  <div className="zip-input">
+                      <TextField
+                          id="zippy" type="text" name="zipcode" placeholder="Enter zip code"
+                          margin="normal"
+                          variant="outlined"
+                      />
+                  </div>
+                  <div className="go-button">
+                      <Button id="go"onClick={e => { this.handleMap(); this.handleZip(e); }}>Go!</Button>
+                  </div>
                 </div>
                 <span className="map-span">{this.state.show && <MainMap />}</span>
                 <section id="background-color">
