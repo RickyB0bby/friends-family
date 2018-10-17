@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-// import Header from './Header';
 import {BrowserRouter, Route} from 'react-router-dom';
 import HollywoodBeach from "./Beaches/HollywoodBeach";
 import GoldenBeach from './Beaches/GoldenBeach';

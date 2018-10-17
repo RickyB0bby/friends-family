@@ -43,12 +43,12 @@ class Option1 extends Component{
   render(){
     return(
       <div className="abox" id="dbox">
-         <h3> Find! </h3>
-        <p className="boxy1">Are you tired of beaches being dirty? So let'd find beach's g(gurbage :)-spot and make it clean and pure again! All you need is enter your zip-code and choose any beach within 10 miles.</p>
+         <h3> Clean a Dirty Beach! </h3>
+        <p className="boxy1">Want some good karma points? Go here to find a Dirty Beach that you can help clean up. You can even bring your friends to help!</p>
         <div className="zip-input">
-        <button className="button1" onClick = {this.outputButton1}>Find a beach!</button>
+        <button className="button1" onClick = {(ev) => {this.outputButton1(ev); this.props.toggleForm()}}>Find a beach!</button>
         </div>
-        <div> {this.state.show && <BeachList/>} </div>
+        
       </div>
     )
   }

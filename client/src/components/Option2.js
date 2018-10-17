@@ -8,9 +8,9 @@ class Option2 extends Component{
   constructor(){
     super();
     this.state = { show: false };
-    this.outputButton1 = this.outputButton1.bind(this)
+    this.outputButton2 = this.outputButton2.bind(this)
   }
-  outputButton1 = (event) => {
+  outputButton2 (event) {
     event.preventDefault()
     const {show} = this.state
     this.setState({show: !show})
@@ -41,12 +41,14 @@ class Option2 extends Component{
   render(){
     return(
         <div className="abox1" id="dbox">
-          <h3>Report!</h3>
-          <p className="boxy2"> If you detected a dirty beach yourself and want to purify one, then simply enter beaches zip code and mark it as 'Dirty'</p>
+          <h3>Call out a Dirty Beach!</h3>
+          <p className="boxy2">Are you tired of visiting your beach, only to find out it’s dirty? Call out that Dirty Beach so that it can get cleaned up!</p>
           <div className="zip-input">
-          <button className="button2" onClick = {this.outputButton1}>Report a beach!</button>
+          <button className="button2" onClick ={(ev) => {this.outputButton2(ev); this.props.toggleForm()}}>Report a beach!</button>
           </div>
-          {this.state.show && <BeachList/>}
+          {this.state.show
+            // && <BeachList/>
+          }
       </div>
     )
   }

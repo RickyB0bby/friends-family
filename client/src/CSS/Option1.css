@@ -1,7 +1,9 @@
 * {
   box-sizing: border-box;
 }
-
+h3 {
+  text-align: center;
+}
 .boxy1 {
   /* border: 5px solid blue; */
   font-size: 1.5em;
