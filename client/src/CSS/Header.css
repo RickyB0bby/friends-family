@@ -9,7 +9,7 @@
     box-sizing: inherit;
 }
 #top {
-  width:100%;
+  /* width:100%; */
 }
 
 img {
@@ -122,34 +122,40 @@ left: 10;
 
   #svgAttributes {
     position: relative;
-    left: 500px;
-    bottom: 50px;
+    left: 400px;
+    bottom: 60px;
   }
 
   #newSvg {
     top: 0;
-    left: 40;
+    left: 10;
     position: absolute;
+    margin-left: 140px;
+    width: 50px;
+    height: 50px;
   }
 
-  #imgLogo {
+  #newLogo {
     position: relative;
-    top: 65px;
-    right: 80px;
+    top: 40px;
+    right: 0px;
+    left: 30px;
   }
 
   #logo {
+    width: auto;
+    height: 125px;
     z-index: 10000;
     position: absolute;
-    top: 50;
+    top: 100;
     left: 50;
   }
-  .logo {
-    width: 80px;
-    height: 80px;
-  }
+  /* .logo {
+    width: auto;
+    height: 100px;
+  } */
   .vg {
-    opacity: .75;
+    /* opacity: .75; */
   }
 
     .img {
