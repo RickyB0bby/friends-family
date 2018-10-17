@@ -43,8 +43,8 @@ async componentDidMount() {
     const mapOptions = {
         container: this.mapContainer,
         style: 'mapbox://styles/mapbox/streets-v9',
-        zoom: 9.55,
-        center: [-80.1734, 25.9129]
+        zoom: 9.62,
+        center: [-80.1734, 25.9119]
         
     };
     const geolocationOptions = {
