@@ -1,103 +1,124 @@
-@import url('https://fonts.googleapis.com/css?family=Prata');
+@import url("https://fonts.googleapis.com/css?family=Prata");
 
 /*defaults*/
 input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0px 1000px white inset;
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: Prata;
 }
 
 li {
-    list-style: none;
-    margin-top: .25em;
+  list-style: none;
+  margin-top: 0.25em;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 /*mobile first from header down*/
 
-.header {
-    background-color: rgb(252, 244, 222);
-    padding: 1em;
-    font-family: 'Prata', serif;
-    text-align: center;
+.logo-container {
+  display: flex;
 }
 
+#logo {
+  height: 40%;
+  width: 40%;
+  margin-right: 0.5em;
+  margin-left: -0.4em;
+}
+
+.header {
+  background-color: rgb(248, 247, 242);
+  padding: 1em;
+  font-family: "Prata", serif;
+  text-align: center;
+}
 
 .zip-input {
-    display: flex;
-    justify-content: center;
-    margin-top: -.95em;
+  display: flex;
+  justify-content: center;
+  margin-top: -0.95em;
 }
 
 #zippy {
-    width: 100vw;
-    text-align: center;
-    font-family: 'Prata', serif;
-    font-weight: bold;
+  width: 100vw;
+  text-align: center;
+  font-family: "Prata", serif;
+  font-weight: bold;
 }
 
 .go-button {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 #go {
-    flex-grow: 1;
-    padding: 1.25em;
-    margin-top: -.5em;
-    font-family: 'Prata', serif;
-    font-weight: bold;
-    font-size: 1em;
-    color: white;
-    background-color: rgb(20, 228, 255);
+  flex-grow: 1;
+  padding: 1.25em;
+  margin-top: -0.5em;
+  font-family: "Prata", serif;
+  font-weight: bold;
+  font-size: 1em;
+  color: white;
+  background-color: rgb(20, 228, 255);
 }
 
 .list-container {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    top: 2.5em;
-    right: 1.2em;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 2.5em;
+  right: 1.2em;
 }
 
 #beachButtons {
-    width: 100%;
-    padding: 1.5em;
-    font-family: 'Prata', serif;
-    font-weight: bold;
-    color: white;
-    background-color: rgb(20, 228, 255);
+  width: 100%;
+  padding: 1.5em;
+  font-family: "Prata", serif;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: white;
+  background-color: rgb(20, 228, 255);
+}
+
+.is-dirty {
+    background-color: red;
 }
 
 #background-color {
-    background-color: rgb(248, 247, 242);
-    height: 100vh;
+  background-color: rgb(248, 247, 242);
+  height: 160.6vh;
 }
 
 #main-container {
-    display: flex;
-    justify-content: center;
-    background-color: rgb(17, 17, 15);
-    opacity: .7;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(17, 17, 15);
+  margin-top: -2em;
+  opacity: 0.7;
+  background-image: linear-gradient(to top, rgb(0, 0, 0), rgb(103, 107, 107));
 }
 
+footer {
+    margin: 5em;
+}
 
 footer span i {
-    font-size: 3em;
-    color:  rgb(248, 247, 242);
-    margin: .15em;
-    margin-top: 1em;
+  font-size: 3em;
+  color: rgb(248, 247, 242);
+  margin: 0.15em;
+  margin-top: -20px;
 }
 
 footer p {
-    text-align: right;
-    margin-right: -16em;
-    margin-top: 3.75em;
-    font-size: .80em;
-    color: rgb(248, 247, 242);
+  text-align: right;
+  margin-right: -6.5em;
+  margin-top: -7.75em;
+  font-size: 0.8em;
+  color: rgb(248, 247, 242);
 }

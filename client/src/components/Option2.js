@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import BeachList from './BeachList';
-import anime from 'animejs';
+// import BeachList from './BeachList';
+// import anime from 'animejs';
 import '../CSS/Option2.css'
 
 
@@ -16,8 +16,8 @@ class Option2 extends Component{
     this.setState({show: !show})
   }
   componentDidMount(){
-   var specificPropertyParameters = anime({
-     targets: '#dbox .boxy2',
+  //  var specificPropertyParameters = anime({
+  //    targets: '#dbox .boxy2',
      // translateX: {
      //   value: 250,
      //   duration: 800
@@ -27,26 +27,25 @@ class Option2 extends Component{
      //   duration: 1800,
      //   easing: 'easeInOutSine'
      // },
-     scale: {
-       value: 1.5,
-       duration: 1600,
-       delay: 800,
-       easing: 'easeInOutQuart'
-     },
-     delay: 250,
-     direction: 'reverse', // All properties except 'scale' inherit 250ms delay
-   })
+    //  scale: {
+    //    value: 1.5,
+    //    duration: 1600,
+    //    delay: 800,
+    //    easing: 'easeInOutQuart'
+    //  },
+    //  delay: 250,
+    //  direction: 'reverse', // All properties except 'scale' inherit 250ms delay
+  //  })
   }
 
   render(){
     return(
         <div className="abox1" id="dbox">
-          <h3>Report!</h3>
-          <p className="boxy2"> If you detected a dirty beach yourself and want to purify one, then simply enter beaches zip code and mark it as 'Dirty'</p>
-          <div className="zip-input">
+          <p className="boxy2">Are you tired of visiting your beach, only to find out it’s dirty? Above is a list of Dirty Beaches in your area, if you want to get your hands dirty, go to the beach near you that needs the most love and go make a difference!</p>
+          {/* <div className="zip-input">
           <button className="button2" onClick = {this.outputButton1}>Report a beach!</button>
           </div>
-          {this.state.show && <BeachList/>}
+          {this.state.show && <BeachList/>} */}
       </div>
     )
   }
