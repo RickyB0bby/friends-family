@@ -35,7 +35,7 @@ class Header extends Component{
       },
       rotate: function() {return anime.random(-360,360);},
       duration: function() { return anime.random(1200, 1800); },
-      duration: function() { return anime.random(800, 1600); },
+      // duration: function() { return anime.random(800, 1600); },
       delay: function() { return anime.random(400,600); },
       direction: 'reverse',
         })

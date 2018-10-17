@@ -4,9 +4,9 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
-import Footer from "./Footer";
+// import Footer from "./Footer";
 import MainMap from "./MainMap";
-import "../BeachList.css";
+// import "../BeachList.css";
 import '../CSS/List.css'
 
 
@@ -86,7 +86,7 @@ export default class BeachList extends Component {
             </ul>
           </div>
         </section>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     );
   }
