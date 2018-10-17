@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import BeachList from './BeachList';
 import anime from 'animejs';
-import Button from '@material-ui/core/Button';
-import TextField from '@material-ui/core/TextField';
+// import Button from '@material-ui/core/Button';
+// import TextField from '@material-ui/core/TextField';
 import '../CSS/Option1.css'
 
 class Option1 extends Component{

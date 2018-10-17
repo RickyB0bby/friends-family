@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^3.2.2",
+    "animejs": "^2.2.0",
     "axios": "^0.18.0",
     "google-map-react": "^1.0.9",
     "mapbox": "^1.0.0-beta10",

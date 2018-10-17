@@ -8,6 +8,7 @@ import HauloverBeach from './Beaches/HauloverBeach';
 import SouthBeach from './Beaches/SouthBeach';
 
 
+
 class Home extends Component{
   render(){
     return(
