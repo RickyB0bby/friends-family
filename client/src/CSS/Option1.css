@@ -1,19 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Prata');
+
 * {
   box-sizing: border-box;
 }
 
+.page-break {
+  display: flex;
+  justify-content: center;
+}
+
 .boxy1 {
   /* border: 5px solid blue; */
+  flex-grow: 1;
   font-size: 1.5em;
+  font-family: Prata;
+  font-weight: bold;
   color: white;
-  margin-bottom: 35px;
-  /* margin-left: 5px;
-  margin-right: 5px; */
-  padding-top: 50px;
-  padding-left: 5px;
-  padding-right: 5px;
-  padding-bottom: 50px;
-  background-color: #74cbcf;
+  margin-top: 2px;
+  margin-bottom: -.2px;
+  padding: 2em;
+  background-color: rgb(20, 228, 255);
+  border-radius: 2%;
 
 }
 
@@ -64,7 +71,6 @@
     padding-bottom: 50px;
   }
   .abox{
-    height: 400px;
     width: 100%;
   }
   .button1 {

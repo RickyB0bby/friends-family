@@ -10,7 +10,7 @@ export default class HollywoodBeach extends Component {
               <span><i className="fab fa-github-square"></i></span>  
               <span><i className="fab fa-twitter-square"></i></span>
               <span><i className="fab fa-instagram"></i></span>
-              <p>&copy; The Dream Team 2018</p>
+              {/* <p>&copy; The Dream Team 2018</p> */}
             </footer>
         </div>
         )

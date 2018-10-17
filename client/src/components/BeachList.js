@@ -1,4 +1,3 @@
-
 import React, {Component} from 'react';
 import axios from 'axios';
 import {Link} from 'react-router-dom';
@@ -6,8 +5,9 @@ import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import Footer from './Footer';
 import MainMap from "./MainMap";
+import Option1 from './Option1';
+import Option2 from './Option2';
 import '../BeachList.css'
-// import HollywoodBeach from './HollywoodBeach'
 
 export default class BeachList extends Component {
     constructor(props) {
@@ -54,11 +54,14 @@ export default class BeachList extends Component {
 
     render() {
         return (
-            <div>
+            <div id="main">
                 <header className="header">
+                <div className="logo-container">
+                    <img id="logo" src={require('../CSS/Images/Logo.png')} alt="Dirty Beaches Logo" />
                     <h1 className="greet">Welcome to Dirty Beaches</h1>
-                    <p className="findBeach">Enter your zip code to find a beach near you!</p>
+                </div>
                 </header>
+                <Option1 handleZip = {this.state.handleZip}/>
                 <div className="zip-input">
                     <TextField
                         id="zippy" type="text" name="zipcode" placeholder="Enter zip code"
@@ -73,13 +76,14 @@ export default class BeachList extends Component {
                 <section id="background-color">
                     <div className="list-container">
                         <ul>
-                            <Link to={{pathname: '/hollywoodbeach', state: {beachClick: this.beachClick}}}>{this.getBeaches()[0]}</Link>
+                            <Link className="is-dirty" to={{pathname: '/hollywoodbeach', state: {beachClick: this.beachClick}}}>{this.getBeaches()[0]}</Link>
                             <Link to="/goldenbeach">{this.getBeaches()[1]}</Link>
                             <Link to="/sunnyislesbeach">{this.getBeaches()[2]}</Link>
                             <Link to="/hauloverbeach">{this.getBeaches()[3]}</Link>
-                            <Link to="/southbeach">{this.getBeaches()[4]}</Link>
+                            <Link className="is-dirty" to="/southbeach">{this.getBeaches()[4]}</Link>
                         </ul>
                     </div>
+                    <span className="map-span">{this.state.show && <Option2 />}</span>
                 </section>
                 <Footer />
             </div>

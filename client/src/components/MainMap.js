@@ -113,7 +113,7 @@ render() {
     const style = {
         width: '100%',
         height: '30em',
-        borderRadius: '5%'
+        borderRadius: '2%'
     };
     return (
     <div id="map-page">

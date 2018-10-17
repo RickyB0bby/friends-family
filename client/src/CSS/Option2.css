@@ -3,17 +3,16 @@
 }
 .boxy2 {
   /* border: 5px solid blue; */
+  flex-grow: 1;
   font-size: 1.5em;
-  color: white;
-  margin-top: 1em;
-  margin-bottom: 35px;
-  /* margin-left: 5px;
-  margin-right: 5px; */
-  padding-top: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 20px;
-  background-color: #62bfa9;
+  font-family: Prata;
+  font-weight: bold;
+  color:black;
+  margin-top: 2.5em;
+  margin-bottom: -.2px;
+  padding: 3em;
+
+  border-radius: 2%;
 }
 .button2 {
   /* border-radius: 8px; */
