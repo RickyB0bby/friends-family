@@ -8,40 +8,22 @@ import Popup from './Popup';
 
 const locations = [
 {
-    name: 'Hollywood Beach',
-    longitude: -80.1170,
-    latitude: 26.0087
-}
+    name: 'Golden Beach',
+    longitude: -80.1190,
+    latitude: 25.9651
+},
   ]
 
-const loadPosition = async () => {
-    try {
-        const position = await getCurrentPosition();
-        return position
-    } catch (error) {
-        console.log(error);
-    }
-    };
 
-const getCurrentPosition = (options = {}) => {
-    return new Promise((resolve, reject) => {
-        navigator.geolocation.getCurrentPosition(resolve, reject, options);
-    });
-    };
+class GoldenMap extends Component {
 
-class Map extends Component {
-
-async componentDidMount() {
-    let geoLoc;
-    let position = await loadPosition();
-    
-    geoLoc = [position.coords.longitude, position.coords.latitude]
+async componentDidMount() {    
     mapboxgl.accessToken = 'pk.eyJ1Ijoid2lsbGlhbWtvbnRvcyIsImEiOiJjam5iOGRrOGYwMWNzM2tsODQ3a2Zha3Y0In0.vVHRN-Su0kyVhOe8N6KBhg'
     const mapOptions = {
         container: this.mapContainer,
-        style: 'mapbox://styles/mapbox/satellite-v9',
-        zoom: 13,
-        center: geoLoc
+        style: 'mapbox://styles/mapbox/streets-v9',
+        zoom: 13.25,
+        center: [-80.1223, 25.9651]
     };
     const geolocationOptions = {
         enableHighAccuracy: true,
@@ -62,7 +44,7 @@ createMap = (mapOptions, geolocationOptions) => {
     map.addControl(
     new mapboxgl.GeolocateControl({
         positionOptions: geolocationOptions,
-        trackUserLocation: false
+        trackUserLocation: true
     })
     );
 
@@ -104,9 +86,9 @@ flyTo = (location) => {
 render() {
 
     const style = {
-        width: '50%',
-        height: '500px',
-        backgroundColor: 'azure'
+        width: '100%',
+        height: '30em',
+        borderRadius: '5%',
     };
     return (
     <div id="map-page">
@@ -116,10 +98,7 @@ render() {
             {
                 locations.map((location, i) => {
                 return (
-                    <span key={i} onClick={ (e) => { this.flyTo(location) } } >
-                        <h3>{location.name}</h3>
-                    </span>
-                    
+                    <span key={i} onClick={ (e) => { this.flyTo(location) } } ></span>    
                 )
                 })
             }
@@ -139,4 +118,4 @@ componentWillUnmount() {
 }
 
 
-export default Map
+export default GoldenMap
