@@ -8,7 +8,6 @@ import Footer from './Footer';
 import MainMap from './MainMap';
 import '../BeachList.css'
 import Header from './Header'
-// import HollywoodBeach from './HollywoodBeach'
 
 export default class BeachList extends Component {
     constructor(props) {

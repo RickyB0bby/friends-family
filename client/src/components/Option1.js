@@ -1,8 +1,5 @@
 import React, {Component} from 'react';
-import BeachList from './BeachList';
 import anime from 'animejs';
-// import Button from '@material-ui/core/Button';
-// import TextField from '@material-ui/core/TextField';
 import '../CSS/Option1.css'
 
 class Option1 extends Component{
@@ -20,15 +17,6 @@ class Option1 extends Component{
  componentDidMount(){
   var specificPropertyParameters = anime({
     targets: '#dbox .boxy1',
-    // translateX: {
-    //   value: 250,
-    //   duration: 800
-    // },
-    // rotate: {
-    //   value: 180,
-    //   duration: 1800,
-    //   easing: 'easeInOutSine'
-    // },
     scale: {
       value: 1.5,
       duration: 1600,

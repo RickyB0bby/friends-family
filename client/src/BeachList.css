@@ -22,7 +22,6 @@ a {
 /*mobile first from header down*/
 
 .header {
-    /* background-color: rgb(252, 244, 222); */
     padding: 1em;
     text-align: center;
 }
@@ -36,7 +35,6 @@ a {
 #zippy {
     width: 100vw;
     text-align: center;
-    /* font-family: 'Prata', serif; */
     font-weight: bold;
 }
 
@@ -49,7 +47,6 @@ a {
     flex-grow: 1;
     padding: 1.25em;
     margin-top: -.5em;
-    /* font-family: 'Prata', serif; */
     font-weight: bold;
     font-size: 1em;
     color: white;

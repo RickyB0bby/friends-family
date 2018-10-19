@@ -27,41 +27,26 @@ class Header extends Component{
         return foo.getAttribute('data-x');
       },
       translateY: [
-  // { value: 0, duration: 1000, elasticity: 100 },
-  // { value: 180, duration: 500, elasticity: 100 },
   { value: 200, duration: 1300, delay: 100, elasticity: 100 }
 ],
       scale: function (foo, i, l){
         return (-1);
       },
       rotate: function() {return anime.random(-360,360);},
-      // duration: function() { return anime.random(1200, 1800); },
-      // duration: function() { return anime.random(800, 1600); },
-      // delay: function() { return anime.random(400,600); },
       direction: 'reverse',
         })
-      // loop: true
-
-      // duration: function(target) {
-      //   return target.getAttribute('data-duration')
-      // }
       anime({
         targets: ["#b1","#b2","#b3"],
         translateX: function(fooA){
           return fooA.getAttribute('data-x');
         },
         translateY: [
-    // { value: 40, duration: 500, elasticity: 100 },
-    // { value: -70, duration: 500, elasticity: 100 },
     { value: -50, duration: 1300, delay: 500, elasticity: 100 }
   ],
         scale: function (fooA, i, l){
           return (-1);
         },
         rotate: function() {return anime.random(-360,360);},
-        // duration: function() { return anime.random(1200, 1800); },
-        // duration: function() { return anime.random(800, 1600); },
-        // delay: function() { return anime.random(400,600); },
         direction: 'reverse',
 
       })
@@ -70,7 +55,6 @@ class Header extends Component{
       points: '64 128 8.574 96 8.574 32 64 0 119.426 32 119.426 96',
       easing: 'easeInOutExpo',
       delay: function() { return anime.random(500,1000); },
-      // loop: 2,
       });
 
   }
