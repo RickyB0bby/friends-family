@@ -1,7 +1,9 @@
 const express = require('express');
 const axios = require('axios');
+const key = require('./config');
+const beachZips = require('./beaches');
 
-const beachZips = require('./beaches')
+const zipKey = key.api.zipKey
 
 const app = express();
 
@@ -15,7 +17,7 @@ app.get('/beaches/', async (req, res) => {
 })
 
 app.get('/userZip/:zipcode', async (req, res) => {
-    let {data} = await axios.get(`https://www.zipcodeapi.com/rest/CwAaX6WrdhTyqwwlLEhHQ2lvKIAZuBlVFYNTPxUs3hijNGqiYwQZ9Glm1GtbRfHw/radius.json/${req.params.zipcode}/20/mile`).catch((err) => console.log(err))
+    let {data} = await axios.get(`https://www.zipcodeapi.com/rest/${zipKey}/radius.json/${req.params.zipcode}/20/mile`).catch((err) => console.log(err))
     res.json(data);
 })
 

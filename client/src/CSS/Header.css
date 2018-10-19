@@ -1,14 +1,13 @@
 /* For mobile */
 
 @import url('https://fonts.googleapis.com/css?family=Great+Vibes');
-
-  body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    box-sizing: inherit;
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 img {
@@ -152,13 +151,6 @@ left: 10;
     top: 100;
     left: 50;
   }
-  /* .logo {
-    width: auto;
-    height: 100px;
-  } */
-  .vg {
-    /* opacity: .75; */
-  }
 
     .img {
       background-image: url('./Images/6a.jpg');
@@ -177,7 +169,6 @@ left: 10;
       margin-right: 65px;
     }
     .fooA {
-
       float: left;
       width: 50px;
       height: 50px;
@@ -219,8 +210,6 @@ left: 10;
     }
     .text{
       margin-top: 100px;
-
-      /* border: 2px solid black; */
       border-radius: 50%;
       color: white;
       background-color: #d7b797;

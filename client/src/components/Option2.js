@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-// import BeachList from './BeachList';
 import anime from 'animejs';
 import '../CSS/Option2.css'
 
@@ -18,15 +17,6 @@ class Option2 extends Component{
   componentDidMount(){
    var specificPropertyParameters = anime({
      targets: '#dbox .boxy2',
-     // translateX: {
-     //   value: 250,
-     //   duration: 800
-     // },
-     // rotate: {
-     //   value: 180,
-     //   duration: 1800,
-     //   easing: 'easeInOutSine'
-     // },
      scale: {
        value: 1.5,
        duration: 1600,
@@ -34,7 +24,7 @@ class Option2 extends Component{
        easing: 'easeInOutQuart'
      },
      delay: 250,
-     direction: 'reverse', // All properties except 'scale' inherit 250ms delay
+     direction: 'reverse',
    })
   }
 

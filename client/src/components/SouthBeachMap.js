@@ -4,7 +4,8 @@ import MapboxGeocoder from 'mapbox-gl-geocoder';
 import './Map.css';
 import ReactDOMServer from 'react-dom/server';
 import Popup from './Popup';
-// import axios from 'axios';
+const key = require('./MapConfig');
+const mapKey = key.api.mapKey
 
 const locations = [
 {
@@ -17,7 +18,7 @@ const locations = [
 class SouthBeachMap extends Component {
 
 async componentDidMount() {
-    mapboxgl.accessToken = 'pk.eyJ1Ijoid2lsbGlhbWtvbnRvcyIsImEiOiJjam5iOGRrOGYwMWNzM2tsODQ3a2Zha3Y0In0.vVHRN-Su0kyVhOe8N6KBhg'
+    mapboxgl.accessToken = mapKey
     const mapOptions = {
         container: this.mapContainer,
         style: 'mapbox://styles/mapbox/streets-v9',
